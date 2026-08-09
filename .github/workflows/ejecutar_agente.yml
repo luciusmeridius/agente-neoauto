@@ -33,5 +33,5 @@ jobs:
         run: |
           git config --global user.name 'Agente Bot'
           git config --global user.email 'bot@users.noreply.github.com'
-          git add autos_vistos.json
-          git diff --quiet && git diff --staged || (git commit -m "Actualizar historial de autos vistos [skip ci]" && git push)
+          git add autos_vistos.json || true
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Actualizar historial de autos vistos [skip ci]" && git push)
